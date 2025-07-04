@@ -27,9 +27,11 @@ git clone https://github.com/MazenSamehR/e-commerce.git
 cd e-commerce 
 ```
 
-2**Compile and run**:
+2. **Compile and run**:
 ```bash
 mvn clean package
+```
+```bash
 java -cp target\classes org.example.Main
 ```
 
