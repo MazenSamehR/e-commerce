@@ -15,6 +15,9 @@ public class ShoppingCart {
     }
 
     public void addToCart(Product product, int quantity) throws Exception{
+        if(product == null){
+            throw new Exception("Product cannot be null");
+        }
         if(quantity <= 0){
             throw new Exception("Quantity must be greater than zero");
         }
@@ -51,6 +54,10 @@ public class ShoppingCart {
         }
         double shippingFee = shippableItems.isEmpty() ? 0 : 30.0; // Assume Shipping fee is always 30
         double total = subtotal + shippingFee;
+        /*
+          Assume this won't fail and this is a transaction that won't get
+          interrupted, so we don't need to handle transaction failure
+         */
         customer.reduceBalance(total);
         for(Map.Entry<Product,Integer> entry : items.entrySet()){
             entry.getKey().reduceQuantity(entry.getValue());

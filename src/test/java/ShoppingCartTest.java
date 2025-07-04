@@ -24,6 +24,11 @@ public class ShoppingCartTest {
     }
 
     @Test
+    void testAddNullProduct() {
+        assertThrows(Exception.class, () -> cart.addToCart(null, 1), "Product cannot be null");
+    }
+
+    @Test
     void testAddToCartExceedsQuantity() {
         assertThrows(Exception.class, () -> cart.addToCart(cheese, 11));
     }

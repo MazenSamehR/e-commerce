@@ -1,6 +1,6 @@
-# E-Commerce System (JDK 17)
+# E-Commerce System
 
-A Java e-commerce system with product management, shopping cart, and checkout functionality.
+A Java console e-commerce system with product management, shopping cart, and checkout functionality.
 
 ## Features
 
@@ -8,7 +8,7 @@ A Java e-commerce system with product management, shopping cart, and checkout fu
 - Shopping cart with quantity validation
 - Checkout process with receipt generation
 - Shipping service integration
-- test suite
+- Test suite
 
 ## Prerequisites
 
@@ -19,17 +19,25 @@ A Java e-commerce system with product management, shopping cart, and checkout fu
 
 ## Running the Application
 
-1. **Compile and run**:
+1. **clone the repository and navigate to the project directory**
+```bash
+git clone https://github.com/MazenSamehR/e-commerce.git
+```
+```bash
+cd e-commerce 
+```
+
+2**Compile and run**:
 ```bash
 mvn clean package
 java -cp target\classes org.example.Main
 ```
 
-2. **Run tests with Maven**:
+3. **Run tests with Maven**:
 ```bash
 mvn test
 ```
-3. **Run with IDE**:
+4. **Run with IDE**:
    - Right-click on src/test/java folder
    - Select `Run 'Tests in java'`
    - Or right-click individual test classes

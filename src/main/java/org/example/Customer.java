@@ -19,6 +19,8 @@ public class Customer {
     public void reduceBalance(double amount) throws Exception{
         if(amount > balance){
             throw new Exception("Not enough balance");
+        }else if (amount < 0) {
+            throw new Exception("Amount must be greater than zero");
         }
         balance -= amount;
     }

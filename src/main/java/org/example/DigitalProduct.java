@@ -12,8 +12,5 @@ public class DigitalProduct extends Product{
     public boolean requiresShipping() {
         return false;
     }
-    @Override
-    public double getWeight() throws Exception {
-        throw new Exception("Digital products don't have weight");
-    }
+
 }

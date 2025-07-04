@@ -26,12 +26,13 @@ public abstract class Product {
     public void reduceQuantity(int amount) throws Exception{
         if(amount > quantity){
             throw new Exception("Not enough quantity available for " + name);
+        }else if (amount < 0) {
+            throw new Exception("Amount must be greater than zero");
         }
         quantity -= amount;
     }
 
     public abstract boolean isExpired();
     public abstract boolean requiresShipping();
-    public abstract double getWeight() throws Exception;
 
 }

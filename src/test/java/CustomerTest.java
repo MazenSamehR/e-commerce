@@ -11,6 +11,12 @@ public class CustomerTest {
     }
 
     @Test
+    void testCustomerHasNegativeBalance(){
+        Customer customer = new Customer("test customer", -50.0);
+        assertEquals(-50.0, customer.getBalance(), "Customer has negative balance");
+    }
+
+    @Test
     void testReduceBalanceInsufficientFunds(){
         Customer customer = new Customer("test customer", 50.0);
         assertThrows(Exception.class, () -> customer.reduceBalance(60.0),"should be thrown for insufficient funds");

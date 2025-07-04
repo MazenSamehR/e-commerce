@@ -15,9 +15,14 @@ public class ProductTest {
     }
 
     @Test
+    void testProductHasNegativeQuantity(){
+        ExpirableProduct cheese = new ExpirableProduct("cheese", 5.99, -10, LocalDate.now().plusDays(1), 0.5);
+        assertEquals(-10, cheese.getQuantity(), "Product has negative quantity");
+    }
+
+    @Test
     void testDigitalProductShipping(){
         DigitalProduct card = new DigitalProduct("Mobile Scratch Cards", 10.0, 100);
         assertFalse(card.requiresShipping());
-        assertThrows(Exception.class, () -> card.getWeight());
     }
 }
