@@ -46,3 +46,29 @@ mvn test
 
 ## Dependencies
 - JUnit 5.8.1 for testing
+
+## Example
+    cart.addToCart(cheese, 10);
+    cart.addToCart(milk, 1);
+    cart.addToCart(TV, 1);
+    cart.addToCart(scratchCards, 5);
+    cart.checkout();
+    
+    ----Consloe Output----
+    ** Checkout receipt **
+    10x cheese 60
+    1x TV 500
+    1x milk 3
+    5x Mobile Scratch Cards 50
+    ----------------------
+    Subtotal 613
+    Shipping 30
+    Total 643
+    Customer's new balance: 357
+   
+    Shipping the following items:
+    - cheese (0.50 kg)
+    - milk (1.00 kg)
+    - TV (10.00 kg)
+   
+    Customer balance after payment: $120.00
